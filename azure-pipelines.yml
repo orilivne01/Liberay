@@ -15,6 +15,9 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'ls -l'
+- task: CmdLine@2
+  inputs:
+    script: 'Chmod 777 gradlew'
 - task: Gradle@3
   inputs:
     gradleWrapperFile: 'gradlew'
