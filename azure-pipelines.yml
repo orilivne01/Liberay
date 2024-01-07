@@ -31,6 +31,7 @@ steps:
 #    spotBugsAnalysis: false    
 - task: Gradle@2
   inputs:
+    workingDirectory: ''
     gradleWrapperFile: 'gradlew'
     tasks: 'build'
     publishJUnitResults: true
