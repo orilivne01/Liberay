@@ -29,7 +29,7 @@ steps:
 #    jdkVersionOption: '1.11'
 #    sonarQubeRunAnalysis: false
 #    spotBugsAnalysis: false    
-- task: Gradle@3
+- task: Gradle@2
   inputs:
     gradleWrapperFile: 'gradlew'
     tasks: 'build'
