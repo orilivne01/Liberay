@@ -14,10 +14,21 @@ steps:
   displayName: 'Run a one-line script'
 - task: CmdLine@2
   inputs:
-    script: 'ls -l'
+    script: 'chmod 777 gradlew'
 - task: CmdLine@2
   inputs:
-    script: 'chmod 777 gradlew'
+    script: 'gradlew clean build'
+- task: Gradle@3
+  inputs:
+    gradleWrapperFile: 'gradlew'
+    tasks: 'clean'
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    testRunTitle: 'libery-test'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.11'
+    sonarQubeRunAnalysis: false
+    spotBugsAnalysis: false    
 - task: Gradle@3
   inputs:
     gradleWrapperFile: 'gradlew'
