@@ -10,6 +10,9 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: CmdLine@2
+  inputs:
+    script: 'ls -l /home/vsts/work/1/s/'
 #- script: echo Hello, world!
 #  displayName: 'Run a one-line script'
 #- task: CmdLine@2
