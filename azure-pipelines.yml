@@ -18,17 +18,17 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'ls -l'
-- task: Gradle@3
-  inputs:
-    gradleWrapperFile: 'gradlew'
-    tasks: 'clean'
-    publishJUnitResults: true
-    testResultsFiles: '**/TEST-*.xml'
-    testRunTitle: 'libery-test'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
-    sonarQubeRunAnalysis: false
-    spotBugsAnalysis: false    
+#- task: Gradle@3
+#  inputs:
+#    gradleWrapperFile: 'gradlew'
+#    tasks: 'clean'
+#    publishJUnitResults: true
+#    testResultsFiles: '**/TEST-*.xml'
+#    testRunTitle: 'libery-test'
+#    javaHomeOption: 'JDKVersion'
+#    jdkVersionOption: '1.11'
+#    sonarQubeRunAnalysis: false
+#    spotBugsAnalysis: false    
 - task: Gradle@3
   inputs:
     gradleWrapperFile: 'gradlew'
