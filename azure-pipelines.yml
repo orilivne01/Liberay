@@ -17,7 +17,7 @@ steps:
     script: 'chmod 777 gradlew'
 - task: CmdLine@2
   inputs:
-    script: 'gradlew clean build'
+    script: 'ls -l'
 - task: Gradle@3
   inputs:
     gradleWrapperFile: 'gradlew'
